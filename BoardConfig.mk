@@ -61,9 +61,9 @@ BOARD_KERNEL_BASE                  := 0x00000000
 BOARD_KERNEL_PAGESIZE              := 2048
 BOARD_KERNEL_IMAGE_NAME            := zImage
 BOARD_MKBOOTIMG_ARGS               := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
-TARGET_KERNEL_SOURCE               := kernel/xiaomi/virgo
+TARGET_KERNEL_SOURCE               := kernel/xiaomi/cancro
 TARGET_KERNEL_ARCH                 := arm
-TARGET_KERNEL_CONFIG               := virgo_defconfig
+TARGET_KERNEL_CONFIG               := cancro_user_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
 
@@ -202,14 +202,13 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
     ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
       WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
     endif
   endif
 endif
-DONT_DEXPREOPT_PREBUILTS := true
 
 # qcom sepolicy
 include device/qcom/sepolicy/sepolicy.mk
