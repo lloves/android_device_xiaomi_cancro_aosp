@@ -26,7 +26,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
-PRODUCT_NAME := lineage_cancro
+PRODUCT_NAME := rr_cancro
 PRODUCT_DEVICE := cancro
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
