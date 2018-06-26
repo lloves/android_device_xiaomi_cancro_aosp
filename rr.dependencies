@@ -1,0 +1,17 @@
+[
+  {
+    "repository": "LineageOS/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "branch": "lineage-15.1"
+  },
+    {
+    "repository": "Vovan77rus59/android_vendor_xiaomi_cancro_test",
+    "target_path": "vendor/xiaomi/cancro",
+    "branch": "lineage-15.1"
+  },
+  {
+    "repository": "Vovan77rus59/android_kernel_xiaomi_virgo",
+    "target_path": "kernel/xiaomi/virgo",
+    "branch": "mko-mr1"
+  }
+]
