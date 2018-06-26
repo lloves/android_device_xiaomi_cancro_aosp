@@ -200,6 +200,9 @@ TARGET_LD_SHIM_LIBS := /system/lib/libcutils.so|libshim_atomic.so:/system/vendor
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
