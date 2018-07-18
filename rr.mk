@@ -40,5 +40,5 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	      BUILD_FINGERPRINT="Xiaomi/cancro/cancro:6.0.1/MMB29M/V9.6.3.0.MXDCNFD:user/release-keys" \
+	BUILD_FINGERPRINT="Xiaomi/cancro/cancro:6.0.1/MMB29M/V9.6.3.0.MXDCNFD:user/release-keys" \
         PRIVATE_BUILD_DESC="cancro-user 6.0.1 MMB29M V9.6.3.0.MXDCNFD release-keys"
