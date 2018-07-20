@@ -21,16 +21,20 @@ TARGET_SCREEN_WIDTH := 1080
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common lineage stuff.
+$(call inherit-product, vendor/rr/config/common.mk)
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
-PRODUCT_NAME := rr_cancro
-PRODUCT_DEVICE := cancro
+BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
+PRODUCT_DEVICE := cancro
+PRODUCT_NAME := rr_cancro
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_RESTRICT_VENDOR_FILES := false
 PRODUCT_MODEL := MI Cancro
+TARGET_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -40,5 +44,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	BUILD_FINGERPRINT="Xiaomi/cancro/cancro:6.0.1/MMB29M/V9.6.3.0.MXDCNFD:user/release-keys" \
-        PRIVATE_BUILD_DESC="cancro-user 6.0.1 MMB29M V9.6.3.0.MXDCNFD release-keys"
+    PRIVATE_BUILD_DESC="cancro-user 6.0.1 MMB29M V9.6.3.0.MXDCNFD release-keys"
+	
+BUILD_FINGERPRINT=Xiaomi/cancro/cancro:6.0.1/MMB29M/V9.6.3.0.MXDCNFD:user/release-keys
