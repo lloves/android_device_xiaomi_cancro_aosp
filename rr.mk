@@ -20,7 +20,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
+# Inherit some common RR stuff.
 $(call inherit-product, vendor/rr/config/common.mk)
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
