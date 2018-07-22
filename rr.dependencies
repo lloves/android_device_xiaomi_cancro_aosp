@@ -15,7 +15,7 @@
     "branch": "lineage-15.1"
   },
   {
-    "repository": "Vovan77rus59/android_kernel_xiaomi_virgo",
+    "repository": "Vovan77rus59/android_kernel_xiaomi_cancro",
     "target_path": "kernel/xiaomi/virgo",
     "branch": "mko-mr1"
   }
