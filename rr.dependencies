@@ -10,7 +10,7 @@
     "branch":      "lineage-15.1"
   },
     {
-    "repository": "Vovan77rus59/android_vendor_xiaomi_cancro",
+    "repository": "Vovan77rus59/proprietary_vendor_xiaomi_cancro",
     "target_path": "vendor/xiaomi/cancro",
     "branch": "lineage-15.1"
   },
