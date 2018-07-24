@@ -210,7 +210,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=56 \
     ro.hwui.layer_cache_size=32 \
-ro.hwui.path_cache_size=16
+    ro.hwui.path_cache_size=16
 
 # Media profile
 PRODUCT_COPY_FILES += \
