@@ -43,15 +43,16 @@
          If no value is found for the rat-name in use, the system default will be applied.
     -->
     <string-array name="config_mobile_tcp_buffers">
-        <item>"lte:2097152,4194304,8388608,262144,524288,1048576"</item>
-        <item>"umts:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hspa:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hsupa:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hsdpa:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"hspap:4094,87380,1220608,4096,16384,1220608"</item>
-        <item>"edge:4093,26280,35040,4096,16384,35040"</item>
-        <item>"gprs:4092,8760,11680,4096,8760,11680"</item>
-        <item>"evdo:4094,87380,524288,4096,16384,262144"</item>
+        <item>umts:131072,262144,1452032,4096,16384,399360</item>
+        <item>hspa:131072,262144,2441216,4096,16384,399360</item>
+        <item>hsupa:131072,262144,2441216,4096,16384,399360</item>
+        <item>hsdpa:131072,262144,2441216,4096,16384,399360</item>
+        <item>hspap:131072,262144,2441216,4096,16384,399360</item>
+        <item>edge:16384,32768,131072,4096,16384,65536</item>
+        <item>gprs:4096,8192,24576,4096,8192,24576</item>
+        <item>1xrtt:16384,32768,131070,4096,16384,102400</item>
+        <item>evdo:131072,262144,1048576,4096,16384,524288</item>
+        <item>lte:524288,1048576,8388608,262144,524288,4194304</item>
     </string-array>
     
     <!-- Configure wifi tcp buffersizes in the form:
@@ -71,8 +72,8 @@
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>      <!-- pitch black -->
         <item>5</item>
-    <item>10</item>     <!-- dark indoor -->
-    <item>15</item>
+        <item>10</item>     <!-- dark indoor -->
+        <item>15</item>
         <item>25</item>     <!-- twilight -->
         <item>50</item>     <!-- dim indoor -->
         <item>100</item>    <!-- home -->
@@ -163,7 +164,6 @@
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-        <item>"bnep\\d"</item>
         <item>"bt-pan"</item>
     </string-array>
 
@@ -175,7 +175,6 @@
         <item>1</item>
         <item>5</item>
         <item>7</item>
-        <item>9</item>
     </integer-array>
 
     <!-- This string array should be overridden by the device to present a list of network
@@ -200,7 +199,7 @@
         <item>"mobile_ia,14,0,2,-1,true"</item>
         <item>"bluetooth,7,7,2,-1,true"</item>
         <item>"ethernet,9,9,9,-1,true"</item>
-        <item>"mobile_emergency,15,0,2,-1,true"</item>
+        <item>"mobile_emergency,15,0,2,-1,true</item>
     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
@@ -278,6 +277,13 @@
     <!-- Default time when Night display is automatically deactivated.
       Represented as milliseconds from midnight (e.g. 21600000 == 6am). -->
     <integer name="config_defaultNightDisplayCustomEndTime">21600000</integer>
+
+    <!-- Integer parameters of the wifi to cellular handover feature
+         wifi should not stick to bad networks -->
+    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-100</integer>
+    <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-100</integer>
+    <integer name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-100</integer>
+    <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-100</integer>
 
     <!-- Values for GPS configuration -->
     <string-array translatable="false" name="config_gpsParameters">
@@ -386,5 +392,4 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
-    
 </resources>
