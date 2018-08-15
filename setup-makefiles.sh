@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-DEVICE=libra
+DEVICE=cancro
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2017
