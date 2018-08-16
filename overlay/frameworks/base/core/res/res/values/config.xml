@@ -334,6 +334,10 @@
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
     <bool name="config_deviceHasButtonBacklight">true</bool>-->
 
+    <!-- If enabled, capacitive keys will only light up when pressed.
+         Otherwise, the buttons will light up whenever the user interacts with the device
+    <bool name="config_buttonLightOnKeypressOnly">true</bool>-->
+
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm/boot-framework.oat"</item>
@@ -365,6 +369,9 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">83</integer>
+
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">true</bool>
     
     <!-- Does the notification LED support multiple colors?
          Used to decide if the user can change the colors 
@@ -388,6 +395,16 @@
 
     <!-- Default LED off time for notification LED in milliseconds. -->
     <integer name="config_defaultNotificationLedOff">2000</integer>
+
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    
+    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
+    <bool name="config_displayBlanksAfterDoze">true</bool>
+    
+    <!-- True if the display hardware only has brightness buckets rather than a full range of
+         backlight values -->
+    <bool name="config_displayBrightnessBucketsInDoze">true</bool>
     
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
