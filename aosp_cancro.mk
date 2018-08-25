@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 GAPPS_VARIANT := nano
 TARGET_GAPPS_ARCH := arm
-CUSTOM_BUILD_TYPE := 
+CUSTOM_BUILD_TYPE := STABLE
 
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
@@ -43,8 +43,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
 
 TARGET_BOOT_ANIMATION_RES := 1080
-
-EXTENDED_BUILD_TYPE=STABLE
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
