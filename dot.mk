@@ -27,7 +27,7 @@ $(call inherit-product, vendor/dot/config/common.mk)
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_cancro
+PRODUCT_NAME := dot_cancro
 PRODUCT_DEVICE := cancro
 
 PRODUCT_BRAND := Xiaomi
