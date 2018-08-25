@@ -20,8 +20,11 @@ TARGET_SCREEN_WIDTH := 1080
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AEX stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common PEX stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+GAPPS_VARIANT := nano
+TARGET_GAPPS_ARCH := arm
+CUSTOM_BUILD_TYPE := 
 
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
@@ -41,7 +44,7 @@ TARGET_CONTINUOUS_SPLASH_ENABLED := true
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
-EXTENDED_BUILD_TYPE := STABLE
+EXTENDED_BUILD_TYPE=STABLE
 
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
